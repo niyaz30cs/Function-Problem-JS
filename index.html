@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Function in JS</title>
+</head>
+<body>
+    <h1 class="center">Function-Day-1</h1>
+    <h2 class="question">Q-1.Create one function with zero parameter having a console statement?</h2>
+    <p>ANS:- <span>Without using parameter i have create a function.</span> 
+        <pre>
+            function add(){
+                var A=10;
+                var B=20;
+                var Result=A+B;
+                console.log("Result=",Result);
+            }
+            add();
+        </pre>
+    </p>
+    <h2 class="question">Q-2.Create one function Which takes two values 
+        as a parameter and print the sum of them as "Sum of 3,4 is 7"?</h2>
+        <p>ANS:- <span>I have pass two parameter inside the function and print sum of two parameter.</span>
+            <pre>
+                function Sum(a,b){
+                    var Sum=a+b;
+                    console.log("Sum=",Sum);
+                }
+                Sum(3,4);
+            </pre>
+        </p>
+
+    <h2 class="question">Q-3.Create one arrow function?</h2>
+    <p>ANS:- <span>This My arrow function.</span>
+        <pre>
+            var function1=()=>{
+                console.log("Hello NIYAZ");
+            };
+            function1();
+        </pre>
+    </p>
+    
+    <h2 class="question">Q-4.Print output:
+        <pre>
+            var x=21;
+            var girl=function(){
+                console.log(x);
+                var x=20;
+            };
+            girl();
+        </pre>
+    </h2>
+    <p>ANS:- <span>undefined</span></p>
+    <h2 class="question">Q-5.Print output:
+        <pre>
+            var x=21;
+            girl();
+            console.log(x);
+            function girl(){
+                console.log(x);
+                var x=20;
+            };
+        </pre>
+    </h2>
+    <p>ANS:- <span>undefined,<br>
+        21</span></p>
+
+   <h2 class="question">Q-6.Print output:
+    <pre>
+        var x=21;
+        a();
+        b();
+
+            function a(){
+               x=20;
+               console.log(x);
+            };
+            function b(){
+               x=40;
+               console.log(x);
+            };
+    </pre>
+   </h2>
+   <p>ANS:- <span>20,40</span></p>
+   <h2 class="question">Write a function that accepts parameter n and returns factorial of n?</h2>
+   <p>ANS:-
+    <pre>
+        function factorial(n){
+            if(n===0 || n===1)
+            {
+                return 1;
+            }
+            else
+            {
+                return n*factorial(n-1);
+            }
+        }
+    </pre>
+   </p>
+   <h1 class="center">Function-Day-2</h1>
+   <h2 class="question2">Q-1.Guess the Output:
+    <pre class="code">
+        function FindSum(a,b)
+        {
+        return a+b;
+        }
+    function DisplayData(data,batch){
+        console.log(`i am from ${data} and My batch is EA${batch}`);
+    }
+    DisplayData("PrepBytes",FindSum(10,9));
+        </pre>
+        </p>
+   </h2>
+   <p>ANS:- <span>I am from PrepBytes and My batch is EA19</span>
+
+  <h2 class="question2">Q-2.Guess the output:
+    <pre class="code">
+        Abc();
+        const Abc=function(){
+           let Value=20;
+           console.log(Value);
+        }
+    </pre>
+  </h2>
+  <p>ANS:- <span>Error- because assigning function can't perform hoisting yet there function call before the function.</span></p>  
+
+  <h2 class="question2">Q-3.Guess the Output:
+    <pre class="code">
+        var a=10;
+        (function (){
+           console.log(a);
+           var a=20;
+        })();
+    </pre>
+  </h2>
+  <p>ANS:- <span>Undefined</span></p>
+
+  <h2 class="question2">Q-4.Guess the Output:
+    <pre class="code">
+        const greet=function(name){
+            return function(m){
+                console.log(`Hi !! ${name},${m}`);
+            }
+        }
+        const greet_message=greet("EA19");
+        greet_message("Welcome To PrepBytes");
+    </pre>
+  </h2>
+  <p>ANS:- <span>Hi !! EA19,Welcome To PrepBytes</span></p>
+</body>
+<script src="./script.js"></script>
+</html>
